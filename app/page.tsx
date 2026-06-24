@@ -1,16 +1,11 @@
+import { SiteFooter } from './components/SiteFooter';
+import { SiteNav } from './components/SiteNav';
+
 const repos = [
   ['Critical Systems Readiness', 'Release readiness, platform reliability, QA strategy and operational-risk frameworks.', 'https://github.com/IRozinko/critical-systems-readiness'],
   ['Payment Flow Risk Matrix', 'Risk matrix for fees, balances, limits, transaction states and wallet/payment edge cases.', 'https://github.com/IRozinko/payment-flow-risk-matrix'],
   ['AI Agent Reliability Kit', 'Evaluation and regression-testing framework for AI agents and LLM workflows.', 'https://github.com/IRozinko/ai-agent-reliability-kit'],
   ['Embedded Cloud Reliability', 'Reliability framework for device → firmware → backend → cloud → monitoring systems.', 'https://github.com/IRozinko/embedded-cloud-reliability'],
-];
-
-const navLinks = [
-  ['About', '/about'],
-  ['Services', '/services'],
-  ['Case studies', '/case-studies'],
-  ['CV', '/cv'],
-  ['Northbridge', '/northbridge'],
 ];
 
 const services = [
@@ -38,16 +33,17 @@ const pages = [
   ['CV', 'Targeted CV versions available on request.', '/cv'],
 ];
 
+const availability = [
+  ['Senior technical roles', 'Principal / Staff / Platform / SRE / Head-level roles where the system is complex and the cost of failure is high.'],
+  ['Advisory engagements', 'Risk audits, release-readiness reviews, platform stabilization, fintech/Web3 flow reviews and AI reliability assessments.'],
+  ['Fractional leadership', 'Technical judgement, roadmap review, operating model design and delivery-risk control without a full-time executive commitment.'],
+  ['Delivery pod', 'A trusted network of developers, QA/AQA and DevOps engineers can be brought in for scoped stabilization or implementation work.'],
+];
+
 export default function Home() {
   return (
     <main>
-      <nav className="nav">
-        <a className="brand" href="/">IR</a>
-        <div>
-          {navLinks.map(([label, url]) => <a href={url} key={url}>{label}</a>)}
-          <span className="langSwitch"><a className="active" href="/">EN</a><a href="/ua">UA</a></span>
-        </div>
-      </nav>
+      <SiteNav active="home" locale="en" enHref="/" uaHref="/ua" />
 
       <section id="top" className="hero section">
         <div className="eyebrow">Critical Systems · Platform Reliability · FinTech/Web3 Risk</div>
@@ -75,6 +71,19 @@ export default function Home() {
           <p>
             I help fintech, Web3, SaaS, AI and regulated teams reduce platform, delivery and operational risk across the full technical stack.
           </p>
+        </div>
+      </section>
+
+      <section className="section availability">
+        <div className="eyebrow">Available for</div>
+        <h2>Roles, advisory and scoped delivery where engineering risk needs senior ownership.</h2>
+        <div className="grid four">
+          {availability.map(([title, text]) => (
+            <article className="card" key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -159,6 +168,7 @@ export default function Home() {
           <a className="button secondary" href="https://github.com/IRozinko/northbridge-critical-systems" target="_blank" rel="noreferrer">Northbridge</a>
         </div>
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
