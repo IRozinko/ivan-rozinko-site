@@ -10,11 +10,11 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/case-studies">Case studies</a><a href="/cv">CV Pack</a><a href="/northbridge">Northbridge</a></div></nav>
+      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/services">EN</a><a href="/ua">UA</a></span></div></nav>
       <section className="section hero">
         <div className="eyebrow">Services</div>
         <h1>Advisory for business-critical systems under technical, delivery or compliance pressure.</h1>
-        <p className="lead">The services are designed around one question: where can this system fail in production, in delivery, in audit or in customer-facing financial logic — and what should be fixed first?</p>
+        <p className="lead">The work is designed around one executive question: where can this system fail in production, delivery, audit, customer trust or money-flow integrity — and what should be fixed first?</p>
       </section>
       <section className="section grid two">
         {services.map(([title, text, items]) => (
