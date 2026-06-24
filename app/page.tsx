@@ -9,7 +9,7 @@ const navLinks = [
   ['About', '/about'],
   ['Services', '/services'],
   ['Case studies', '/case-studies'],
-  ['CV Pack', '/cv'],
+  ['CV', '/cv'],
   ['Northbridge', '/northbridge'],
 ];
 
@@ -35,7 +35,7 @@ const pages = [
   ['About', 'Cross-layer engineering background and positioning.', '/about'],
   ['Services', 'Audit, readiness and advisory offers.', '/services'],
   ['Case studies', 'Draft public cases based on experience patterns.', '/case-studies'],
-  ['CV Pack', 'Four market-specific CV versions.', '/cv'],
+  ['CV', 'Targeted CV versions available on request.', '/cv'],
 ];
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
           </p>
           <div className="ctaRow">
             <a className="button primary" href="/northbridge">Northbridge</a>
-            <a className="button secondary" href="/cv">CV Pack</a>
+            <a className="button secondary" href="/cv">Request CV</a>
           </div>
         </div>
         <div className="card accent">
@@ -153,7 +153,8 @@ export default function Home() {
           <p>Best fit: Principal / Staff / Head / Fractional CTO roles or advisory work in fintech, Web3, AI, SaaS, platform, embedded-to-cloud and regulated systems.</p>
         </div>
         <div className="ctaRow">
-          <a className="button primary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">GitHub</a>
+          <a className="button primary" href="mailto:ivan.rozinko@gmail.com">Email</a>
+          <a className="button secondary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">GitHub</a>
           <a className="button secondary" href="https://github.com/IRozinko/northbridge-critical-systems" target="_blank" rel="noreferrer">Northbridge</a>
         </div>
       </section>
