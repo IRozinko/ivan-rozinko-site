@@ -1,6 +1,4 @@
-# Case Study Draft — Firmware-to-Software Systems Thinking
-
-> Draft. Review and adjust exact firmware/software project details before publishing.
+# Case Study — Firmware-to-Software Systems Thinking
 
 ## Context
 
@@ -21,7 +19,7 @@ Many product and cloud teams reason only at the application layer. That can hide
 
 When firmware, backend and cloud teams do not share a clear system model, failures become hard to reproduce, diagnose and explain.
 
-## What I did
+## Work performed
 
 - Applied low-level systems thinking to broader software and platform decisions.
 - Reasoned about state, boundaries, constraints and failure modes.
