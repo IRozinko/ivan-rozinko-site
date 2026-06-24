@@ -1,6 +1,4 @@
-# Case Study Draft — Platform Reliability & CI/CD Control
-
-> Draft. Review against real projects before publishing.
+# Case Study — Platform Reliability & CI/CD Control
 
 ## Context
 
@@ -21,7 +19,7 @@ Typical failure points included:
 
 When CI/CD, infrastructure and monitoring are not treated as one operating system, teams ship faster than they can safely observe, rollback or explain failures.
 
-## What I did
+## Work performed
 
 - Reviewed CI/CD and release-readiness flow.
 - Connected pipeline checks with risk and critical paths.
