@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Ivan Rozinko — Critical Systems Engineering Leader',
   description:
-    'Software, firmware, cloud, platform reliability, QA strategy, fintech/Web3 risk and regulated systems.',
+    'Critical Systems / Platform / Reliability Engineering Leader across software, firmware, cloud, QA strategy, fintech/Web3 risk, AI readiness and regulated delivery.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
