@@ -1,3 +1,6 @@
+import { SiteFooter } from '../components/SiteFooter';
+import { SiteNav } from '../components/SiteNav';
+
 const layers = [
   ['Firmware & low-level systems', 'C/C++, FPGA and embedded-level thinking: constraints, state, timing, boundaries and failure modes.'],
   ['Software engineering', 'Java, Go, Node.js and backend/product delivery across business-critical services.'],
@@ -10,7 +13,7 @@ const layers = [
 export default function AboutPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/about">EN</a><a href="/ua">UA</a></span></div></nav>
+      <SiteNav active="about" locale="en" enHref="/about" uaHref="/ua/about" />
       <section className="section hero">
         <div className="eyebrow">About</div>
         <h1>Cross-layer technical leadership for systems where failure is expensive.</h1>
@@ -34,6 +37,7 @@ export default function AboutPage() {
           {layers.map(([title, text]) => <article className="card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
         </div>
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
