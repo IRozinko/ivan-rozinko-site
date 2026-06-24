@@ -1,6 +1,4 @@
-# Case Study Draft — QA Strategy for Cloud Microservices
-
-> Draft. Review and adjust exact project details before publishing.
+# Case Study — QA Strategy for Cloud Microservices
 
 ## Context
 
@@ -18,9 +16,9 @@ The quality model needed to move beyond test execution into risk-based engineeri
 
 ## Risk
 
-Without a clear QA strategy, the team could ship with blind spots, over-rely on manual checks, slow down releases or miss integration defects between services.
+Without a clear QA strategy, the team can ship with blind spots, over-rely on manual checks, slow down releases or miss integration defects between services.
 
-## What I did
+## Work performed
 
 - Structured test strategy around critical flows and risk areas.
 - Connected automation priorities with release-readiness goals.
