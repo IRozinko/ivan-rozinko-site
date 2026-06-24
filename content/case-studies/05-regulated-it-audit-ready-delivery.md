@@ -1,6 +1,4 @@
-# Case Study Draft — Regulated IT & Audit-Ready Delivery
-
-> Draft based on regulated enterprise / energy / NKREKP-style work. Review names, dates, documents and scope before publishing.
+# Case Study — Regulated IT & Audit-Ready Delivery
 
 ## Context
 
@@ -21,7 +19,7 @@ Regulated IT work is not only about building software. It requires clear evidenc
 
 Without structured documentation and evidence, even useful technical work can fail approval, create audit pain, slow procurement or be misunderstood by non-technical stakeholders.
 
-## What I did
+## Work performed
 
 - Prepared and structured technical documentation for regulated IT initiatives.
 - Connected technical scope with business, operational and regulatory justification.
