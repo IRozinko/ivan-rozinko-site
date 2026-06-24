@@ -1,3 +1,6 @@
+import { SiteFooter } from '../components/SiteFooter';
+import { SiteNav } from '../components/SiteNav';
+
 const articles = [
   ['QA is not a department. It is a risk-control system.', 'Moving from test cases and late validation to release-risk ownership and business-critical quality signals.'],
   ['Most payment bugs are not calculation bugs. They are state bugs.', 'A fintech note about balances, fees, retries, callbacks, provider timing and user-facing transaction states.'],
@@ -9,7 +12,7 @@ const articles = [
 export default function WritingPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><span className="langSwitch"><a className="active" href="/writing">EN</a><a href="/ua">UA</a></span></div></nav>
+      <SiteNav active="writing" locale="en" enHref="/writing" uaHref="/ua/writing" />
       <section className="section hero">
         <div className="eyebrow">Writing</div>
         <h1>Field notes on critical systems, platform reliability, fintech risk and AI production readiness.</h1>
@@ -18,6 +21,7 @@ export default function WritingPage() {
       <section className="section grid two">
         {articles.map(([title, text]) => <article className="card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
