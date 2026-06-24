@@ -8,11 +8,11 @@ const tracks = [
 export default function CVPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/northbridge">Northbridge</a></div></nav>
+      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/cv">EN</a><a href="/ua">UA</a></span></div></nav>
       <section className="section hero">
         <div className="eyebrow">CV</div>
         <h1>Targeted CV available on request.</h1>
-        <p className="lead">I keep separate CV versions for different markets instead of sending one generic resume everywhere. That keeps the positioning precise and avoids mixing unrelated signals for recruiters, CTOs and advisory clients.</p>
+        <p className="lead">I keep separate CV versions for different markets instead of sending one generic resume everywhere. That keeps the signal precise for recruiters, CTOs, founders and advisory clients.</p>
         <div className="ctaRow">
           <a className="button primary" href="mailto:ivan.rozinko@gmail.com">Request CV</a>
           <a className="button secondary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">View GitHub</a>
