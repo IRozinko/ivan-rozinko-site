@@ -1,3 +1,6 @@
+import { SiteFooter } from '../components/SiteFooter';
+import { SiteNav } from '../components/SiteNav';
+
 const services = [
   ['Critical Systems Risk Audit', 'Cross-layer review of architecture, CI/CD, QA strategy, platform reliability, observability, incident readiness, delivery process and business-critical flows.', ['Risk map', 'Top failure modes', '30/60/90 remediation roadmap', 'Executive summary']],
   ['Platform & Release Readiness', 'Readiness review for teams preparing important releases, migrations, scaling work or production hardening.', ['SLO/SLI review', 'Release gates', 'Rollback readiness', 'Monitoring coverage']],
@@ -10,7 +13,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/services">EN</a><a href="/ua">UA</a></span></div></nav>
+      <SiteNav active="services" locale="en" enHref="/services" uaHref="/ua/services" />
       <section className="section hero">
         <div className="eyebrow">Services</div>
         <h1>Advisory for business-critical systems under technical, delivery or compliance pressure.</h1>
@@ -25,6 +28,7 @@ export default function ServicesPage() {
           </article>
         ))}
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
