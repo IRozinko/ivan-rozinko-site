@@ -5,13 +5,21 @@ const repos = [
   ['Embedded Cloud Reliability', 'Reliability framework for device → firmware → backend → cloud → monitoring systems.', 'https://github.com/IRozinko/embedded-cloud-reliability'],
 ];
 
+const navLinks = [
+  ['About', '/about'],
+  ['Services', '/services'],
+  ['Case studies', '/case-studies'],
+  ['CV Pack', '/cv'],
+  ['Northbridge', '/northbridge'],
+];
+
 const services = [
-  ['Critical Systems Risk Audit', 'Architecture, CI/CD, QA strategy, platform reliability, observability, incident readiness and delivery-risk map.'],
-  ['Platform & Release Readiness', 'SLOs, pipelines, release gates, rollback readiness, monitoring coverage and production ownership.'],
-  ['FinTech / Web3 Risk Review', 'Payment flows, wallet states, balances, fees, limits, transaction lifecycles and edge-case coverage.'],
-  ['AI Reliability Review', 'Agent workflow risks, prompt regression, tool-use boundaries, audit trails and production readiness.'],
-  ['Embedded-to-Cloud Review', 'Boundary risks between firmware, devices, backend, cloud ingestion, telemetry and support operations.'],
-  ['Fractional CTO / Advisor', 'Technical strategy, engineering operating model, risk prioritization, vendor and roadmap review.'],
+  ['Critical Systems Risk Audit', 'Architecture, CI/CD, QA strategy, platform reliability, observability, incident readiness and delivery-risk map.', '/services'],
+  ['Platform & Release Readiness', 'SLOs, pipelines, release gates, rollback readiness, monitoring coverage and production ownership.', '/services'],
+  ['FinTech / Web3 Risk Review', 'Payment flows, wallet states, balances, fees, limits, transaction lifecycles and edge-case coverage.', '/services'],
+  ['AI Reliability Review', 'Agent workflow risks, prompt regression, tool-use boundaries, audit trails and production readiness.', '/services'],
+  ['Embedded-to-Cloud Review', 'Boundary risks between firmware, devices, backend, cloud ingestion, telemetry and support operations.', '/services'],
+  ['Fractional CTO / Advisor', 'Technical strategy, engineering operating model, risk prioritization, vendor and roadmap review.', '/services'],
 ];
 
 const experience = [
@@ -23,16 +31,20 @@ const experience = [
   'CTO / Head-level ownership, regulated enterprise systems and audit-ready documentation',
 ];
 
+const pages = [
+  ['About', 'Cross-layer engineering background and positioning.', '/about'],
+  ['Services', 'Audit, readiness and advisory offers.', '/services'],
+  ['Case studies', 'Draft public cases based on experience patterns.', '/case-studies'],
+  ['CV Pack', 'Four market-specific CV versions.', '/cv'],
+];
+
 export default function Home() {
   return (
     <main>
       <nav className="nav">
-        <a className="brand" href="#top">IR</a>
+        <a className="brand" href="/">IR</a>
         <div>
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#proof">Proof</a>
-          <a href="#contact">Contact</a>
+          {navLinks.map(([label, url]) => <a href={url} key={url}>{label}</a>)}
         </div>
       </nav>
 
@@ -43,8 +55,9 @@ export default function Home() {
           Cross-layer engineering leader across software, firmware, cloud, QA strategy, platform reliability, AI readiness, fintech/Web3 and regulated systems.
         </p>
         <div className="ctaRow">
-          <a className="button primary" href="#contact">Start a conversation</a>
-          <a className="button secondary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">View GitHub</a>
+          <a className="button primary" href="/services">Explore services</a>
+          <a className="button secondary" href="/case-studies">View case studies</a>
+          <a className="button secondary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </section>
 
@@ -65,6 +78,19 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="eyebrow">Site map</div>
+        <h2>Start here</h2>
+        <div className="grid four">
+          {pages.map(([title, text, url]) => (
+            <a className="card repo" href={url} key={url}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
         <div className="eyebrow">Experience map</div>
         <div className="chips">
           {experience.map((item) => <span key={item}>{item}</span>)}
@@ -75,11 +101,11 @@ export default function Home() {
         <div className="eyebrow">Advisory areas</div>
         <h2>Where I can help</h2>
         <div className="grid three">
-          {services.map(([title, text]) => (
-            <article className="card" key={title}>
+          {services.map(([title, text, url]) => (
+            <a className="card repo" href={url} key={title}>
               <h3>{title}</h3>
               <p>{text}</p>
-            </article>
+            </a>
           ))}
         </div>
       </section>
@@ -91,6 +117,10 @@ export default function Home() {
           <p>
             A compact advisory engagement that maps the top technical and operational risks across architecture, platform, CI/CD, QA, monitoring, release process, incident readiness and business-critical flows.
           </p>
+          <div className="ctaRow">
+            <a className="button primary" href="/northbridge">Northbridge</a>
+            <a className="button secondary" href="/cv">CV Pack</a>
+          </div>
         </div>
         <div className="card accent">
           <h3>Output</h3>
