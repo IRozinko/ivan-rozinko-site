@@ -1,9 +1,12 @@
+import { SiteFooter } from '../components/SiteFooter';
+import { SiteNav } from '../components/SiteNav';
+
 const auditAreas = ['Architecture and ownership boundaries', 'CI/CD and release gates', 'QA strategy and automation coverage', 'Platform reliability and cloud infrastructure', 'Observability and incident readiness', 'Security and compliance evidence', 'Payment / transaction / money-flow risks', 'AI agent / LLM workflow risks', 'Embedded-to-cloud boundary risks', 'Team process and delivery risk'];
 
 export default function NorthbridgePage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><span className="langSwitch"><a className="active" href="/northbridge">EN</a><a href="/ua">UA</a></span></div></nav>
+      <SiteNav active="northbridge" locale="en" enHref="/northbridge" uaHref="/ua/northbridge" />
       <section className="section hero">
         <div className="eyebrow">Northbridge Critical Systems</div>
         <h1>Technical-risk and resilience advisory for systems where failure is expensive.</h1>
@@ -21,6 +24,7 @@ export default function NorthbridgePage() {
         <a className="card repo" href="https://github.com/IRozinko/northbridge-critical-systems" target="_blank" rel="noreferrer"><h3>Northbridge repository</h3><p>Frameworks, audit structure and public advisory materials.</p></a>
         <a className="card repo" href="/services"><h3>Services</h3><p>Review advisory packages and engagement types.</p></a>
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
