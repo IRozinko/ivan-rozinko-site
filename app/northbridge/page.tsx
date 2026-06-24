@@ -3,7 +3,7 @@ const auditAreas = ['Architecture and ownership boundaries', 'CI/CD and release 
 export default function NorthbridgePage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/cv">CV Pack</a></div></nav>
+      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/cv">CV</a><span className="langSwitch"><a className="active" href="/northbridge">EN</a><a href="/ua">UA</a></span></div></nav>
       <section className="section hero">
         <div className="eyebrow">Northbridge Critical Systems</div>
         <h1>Technical-risk and resilience advisory for systems where failure is expensive.</h1>
@@ -13,7 +13,7 @@ export default function NorthbridgePage() {
         <div>
           <div className="eyebrow">Core offer</div>
           <h2>Critical Systems Risk Audit</h2>
-          <p>A compact engagement that maps the top technical and operational risks into a prioritized remediation roadmap for founders, CTOs and engineering leaders.</p>
+          <p>A compact engagement that maps the highest technical and operational risks into a prioritized remediation roadmap for founders, CTOs and engineering leaders.</p>
         </div>
         <div className="card accent"><h3>Assessment areas</h3><ul>{auditAreas.map((area) => <li key={area}>{area}</li>)}</ul></div>
       </section>
