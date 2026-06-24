@@ -1,6 +1,4 @@
-# Case Study Draft — FinTech Fee Service & Payment Risk
-
-> Draft based on known fintech/payment testing experience. Review and adjust project names, scope, numbers and exact responsibilities before publishing.
+# Case Study — FinTech Fee Service & Payment Risk
 
 ## Context
 
@@ -19,14 +17,14 @@ Fee and payment logic can fail in places that are easy to miss with standard QA:
 
 ## Risk
 
-A defect in this area could create financial loss, support load, customer distrust, compliance questions or emergency rollback pressure.
+A defect in this area can create financial loss, support load, customer distrust, compliance questions or emergency rollback pressure.
 
-## What I did
+## Work performed
 
 - Built and reviewed risk-based scenarios for fee and payment behavior.
 - Covered user-facing behavior, not only backend calculations.
 - Structured edge cases around limits, states, transaction outcomes and fee variations.
-- Used previous unit-test and user-side testing experience to identify gaps.
+- Used unit-test and user-side testing experience to identify gaps.
 - Helped transform scattered checks into a clearer payment-risk matrix.
 
 ## Impact
