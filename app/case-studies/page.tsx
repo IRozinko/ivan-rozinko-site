@@ -1,19 +1,19 @@
 const cases = [
-  ['FinTech Fee Service & Payment Risk', 'Risk-based validation of fee logic, user-facing states, limits and transaction edge cases in a fintech environment.', 'FinTech / Web3 / QA Risk'],
-  ['QA Strategy for Cloud Microservices', 'Automation and release-confidence strategy for a cloud-native microservice product with API, backend and CI/CD risks.', 'QA / AQA / Release Risk'],
-  ['Platform Reliability & CI/CD Control', 'Operational-readiness work across CI/CD, infrastructure, monitoring, rollback and release gates.', 'Platform / SRE / DevOps'],
-  ['Firmware-to-Software Systems Thinking', 'Low-level engineering background applied to complex systems, state boundaries and reliability thinking.', 'Firmware / Software'],
-  ['Regulated IT & Audit-Ready Delivery', 'Technical documentation, stakeholder alignment and delivery support in a regulated enterprise environment.', 'Regulated Systems'],
+  ['FinTech Fee Service & Payment Risk', 'Risk-based review of fee logic, user-facing transaction states, limits, balances and edge cases where product behavior directly affects trust and money movement.', 'FinTech / Web3 / QA Risk'],
+  ['QA Strategy for Cloud Microservices', 'A release-confidence approach for cloud-native services: API behavior, integration risk, automation priorities, regression scope and CI/CD quality gates.', 'QA / AQA / Release Risk'],
+  ['Platform Reliability & CI/CD Control', 'Operational readiness across deployment pipelines, infrastructure, monitoring, rollback paths and production ownership for business-critical systems.', 'Platform / SRE / DevOps'],
+  ['Firmware-to-Software Systems Thinking', 'Low-level engineering experience translated into stronger reasoning about state, constraints, timing, boundaries and hidden failure modes in modern software systems.', 'Firmware / Software'],
+  ['Regulated IT & Audit-Ready Delivery', 'Technical documentation, stakeholder alignment and evidence-ready delivery in environments where systems must satisfy business, operational and regulatory expectations.', 'Regulated Systems'],
 ];
 
 export default function CaseStudiesPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/cv">CV Pack</a><a href="/northbridge">Northbridge</a></div></nav>
+      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/cv">CV</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/case-studies">EN</a><a href="/ua">UA</a></span></div></nav>
       <section className="section hero">
         <div className="eyebrow">Case studies</div>
-        <h1>Draft case studies built from real experience patterns and ready for factual refinement.</h1>
-        <p className="lead">These drafts are intentionally written without confidential client names or NDA details. They are designed to be edited into accurate public versions.</p>
+        <h1>Selected experience patterns across critical systems, fintech risk, platform reliability and regulated delivery.</h1>
+        <p className="lead">These case studies are written as public, NDA-safe summaries. They focus on risk, operating context and reusable engineering lessons rather than confidential client details.</p>
       </section>
       <section className="section grid two">
         {cases.map(([title, text, tag]) => (
