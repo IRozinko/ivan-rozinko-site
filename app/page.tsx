@@ -34,7 +34,7 @@ const experience = [
 const pages = [
   ['About', 'Cross-layer engineering background and positioning.', '/about'],
   ['Services', 'Audit, readiness and advisory offers.', '/services'],
-  ['Case studies', 'Draft public cases based on experience patterns.', '/case-studies'],
+  ['Case studies', 'Public, NDA-safe experience summaries.', '/case-studies'],
   ['CV', 'Targeted CV versions available on request.', '/cv'],
 ];
 
@@ -45,6 +45,7 @@ export default function Home() {
         <a className="brand" href="/">IR</a>
         <div>
           {navLinks.map(([label, url]) => <a href={url} key={url}>{label}</a>)}
+          <span className="langSwitch"><a className="active" href="/">EN</a><a href="/ua">UA</a></span>
         </div>
       </nav>
 
