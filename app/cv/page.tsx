@@ -1,3 +1,6 @@
+import { SiteFooter } from '../components/SiteFooter';
+import { SiteNav } from '../components/SiteNav';
+
 const tracks = [
   ['Principal Systems / Platform Engineer', 'For Staff, Principal, Platform Architect and Principal SRE roles.'],
   ['Head of Engineering / CTO', 'For Head, Director, VP Engineering, CTO and Fractional CTO roles.'],
@@ -8,7 +11,7 @@ const tracks = [
 export default function CVPage() {
   return (
     <main>
-      <nav className="nav"><a className="brand" href="/">IR</a><div><a href="/about">About</a><a href="/services">Services</a><a href="/case-studies">Case studies</a><a href="/northbridge">Northbridge</a><span className="langSwitch"><a className="active" href="/cv">EN</a><a href="/ua">UA</a></span></div></nav>
+      <SiteNav active="cv" locale="en" enHref="/cv" uaHref="/ua/cv" />
       <section className="section hero">
         <div className="eyebrow">CV</div>
         <h1>Targeted CV available on request.</h1>
@@ -36,6 +39,7 @@ export default function CVPage() {
           <p>Send the role, company, seniority level and hiring context. I will provide the most relevant version.</p>
         </div>
       </section>
+      <SiteFooter locale="en" />
     </main>
   );
 }
