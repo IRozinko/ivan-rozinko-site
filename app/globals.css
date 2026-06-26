@@ -15,7 +15,7 @@
   --line: rgba(201, 168, 104, .24);
   --line-soft: rgba(242, 234, 219, .095);
   --shadow: 0 34px 110px rgba(0, 0, 0, .62);
-  --radius: 26px;
+  --radius: 24px;
 }
 
 * { box-sizing: border-box; }
@@ -24,9 +24,9 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at 18% 4%, rgba(201,168,104,.14), transparent 28%),
-    radial-gradient(circle at 78% 0%, rgba(71,51,31,.22), transparent 36%),
-    linear-gradient(180deg, #070706 0%, #10100e 46%, #070706 100%);
+    radial-gradient(circle at 12% 0%, rgba(201,168,104,.16), transparent 28%),
+    radial-gradient(circle at 80% 4%, rgba(71,51,31,.28), transparent 34%),
+    linear-gradient(180deg, #070706 0%, #10100e 50%, #070706 100%);
   font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
@@ -39,10 +39,10 @@ body::before {
   pointer-events: none;
   z-index: -2;
   background:
-    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.014) 1px, transparent 1px),
-    radial-gradient(circle at 48% 12%, rgba(201,168,104,.08), transparent 34%);
-  background-size: 86px 86px, 86px 86px, auto;
+    linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px),
+    radial-gradient(circle at 50% 14%, rgba(201,168,104,.08), transparent 34%);
+  background-size: 84px 84px, 84px 84px, auto;
   mask-image: radial-gradient(circle at center, black, transparent 82%);
 }
 
@@ -52,7 +52,7 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: .34;
+  opacity: .28;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
   mix-blend-mode: soft-light;
 }
@@ -61,7 +61,7 @@ a { color: inherit; text-decoration: none; }
 p { color: var(--muted); line-height: 1.75; font-size: 1.02rem; max-width: 76ch; }
 h1, h2, h3 { margin: 0; color: var(--text); }
 h1, h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; letter-spacing: -.045em; }
-h1 { font-size: clamp(4.25rem, 7vw, 8.2rem); line-height: .88; max-width: 780px; }
+h1 { font-size: clamp(4.15rem, 7.1vw, 8.4rem); line-height: .88; max-width: 850px; }
 h1 span { color: var(--gold); }
 h2 { font-size: clamp(2.6rem, 4.8vw, 5.2rem); line-height: .92; margin-bottom: 1.1rem; }
 h3 { font-size: 1.22rem; line-height: 1.2; margin-bottom: .82rem; letter-spacing: -.02em; }
@@ -72,12 +72,12 @@ ul { color: var(--muted); line-height: 1.9; padding-left: 1.15rem; }
   top: 0;
   z-index: 30;
   backdrop-filter: blur(24px);
-  background: rgba(7, 7, 6, .78);
+  background: rgba(7, 7, 6, .82);
   border-bottom: 1px solid var(--line-soft);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem clamp(1rem, 5vw, 4.8rem);
+  padding: .85rem clamp(1rem, 5vw, 4.8rem);
 }
 .brandLockup { display: flex; align-items: center; gap: .75rem; min-width: max-content; }
 .nbMark {
@@ -111,35 +111,52 @@ ul { color: var(--muted); line-height: 1.9; padding-left: 1.15rem; }
 .section { padding: clamp(4.8rem, 9vw, 8.5rem) clamp(1rem, 5vw, 4.8rem); max-width: 1440px; margin: 0 auto; position: relative; }
 .heroShell {
   min-height: calc(100vh - 74px);
-  display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(460px, 1.05fr);
-  align-items: stretch;
+  position: relative;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--line-soft);
   overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7,7,6,.98) 0%, rgba(7,7,6,.92) 42%, rgba(7,7,6,.58) 70%, rgba(7,7,6,.86) 100%),
+    radial-gradient(circle at 72% 42%, rgba(201,168,104,.19), transparent 18%),
+    radial-gradient(circle at 88% 18%, rgba(37,50,58,.32), transparent 30%),
+    linear-gradient(135deg, #080807 0%, #16120e 55%, #070706 100%);
 }
-.heroCopy { padding: clamp(4.5rem, 8vw, 7.4rem) clamp(1rem, 5vw, 4.8rem); display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
-.heroCopy::after { content: ""; width: 78px; height: 1px; background: var(--gold); margin-top: 2rem; opacity: .75; }
-.heroVisual { position: relative; min-height: 640px; border-left: 1px solid var(--line-soft); }
-.heroVisual::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,7,6,.96) 0%, rgba(7,7,6,.38) 22%, rgba(7,7,6,.08) 52%, rgba(7,7,6,.72) 100%); z-index: 2; pointer-events: none; }
-.officeScene { position: absolute; inset: 0; background:
-    radial-gradient(circle at 54% 63%, rgba(201,168,104,.24), transparent 20%),
-    linear-gradient(90deg, rgba(11,10,9,.95), rgba(16,13,10,.72) 55%, rgba(10,16,20,.7)),
-    linear-gradient(180deg, #15110d, #070706);
-  overflow: hidden;
+.heroShell::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: min(58vw, 920px);
+  opacity: .76;
+  background:
+    linear-gradient(90deg, rgba(7,7,6,0), rgba(7,7,6,.36) 28%, rgba(7,7,6,.9) 100%),
+    repeating-linear-gradient(90deg, transparent 0 96px, rgba(201,168,104,.08) 97px 98px),
+    repeating-linear-gradient(0deg, transparent 0 118px, rgba(201,168,104,.055) 119px 120px),
+    radial-gradient(circle at 35% 32%, rgba(201,168,104,.16), transparent 8%),
+    radial-gradient(circle at 58% 30%, rgba(201,168,104,.12), transparent 7%),
+    radial-gradient(circle at 83% 24%, rgba(242,234,219,.08), transparent 10%);
+  border-left: 1px solid var(--line-soft);
 }
-.shelfGrid { position: absolute; left: 8%; top: 5%; width: 46%; height: 48%; display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(2,1fr); border: 1px solid rgba(201,168,104,.08); }
-.shelfGrid span { border-right: 1px solid rgba(201,168,104,.08); border-bottom: 1px solid rgba(201,168,104,.08); background: radial-gradient(circle at 50% 38%, rgba(201,168,104,.16), transparent 26%); }
-.chair { position: absolute; left: 18%; bottom: 29%; width: 230px; height: 240px; border-radius: 38px 38px 10px 10px; background: linear-gradient(135deg, #4a2f1c, #1d130c 60%, #0d0b09); box-shadow: inset 0 0 0 1px rgba(201,168,104,.18), 0 36px 70px rgba(0,0,0,.65); opacity: .9; }
-.chair::before { content: ""; position: absolute; inset: 28px 28px 70px; border-radius: 26px; border: 1px solid rgba(242,234,219,.08); box-shadow: inset 0 18px 28px rgba(255,255,255,.035); }
-.desk { position: absolute; left: 0; right: -8%; bottom: 0; height: 34%; background: linear-gradient(165deg, rgba(105,70,35,.45), rgba(13,10,8,.98) 70%); transform: skewY(-3deg); transform-origin: right bottom; box-shadow: 0 -14px 40px rgba(0,0,0,.55); }
-.book { position: absolute; left: 42%; top: 28%; width: 190px; height: 44px; border-radius: 2px 2px 18px 18px; background: linear-gradient(90deg, rgba(242,234,219,.75), rgba(96,69,38,.4)); box-shadow: 0 12px 30px rgba(0,0,0,.4); }
-.glass { position: absolute; right: 24%; top: 18%; width: 40px; height: 48px; border: 1px solid rgba(201,168,104,.45); border-radius: 0 0 14px 14px; background: linear-gradient(180deg, transparent 45%, rgba(201,168,104,.34)); }
-.lamp { position: absolute; right: 12%; top: -34%; width: 170px; height: 130px; border-top: 2px solid rgba(201,168,104,.62); border-right: 2px solid rgba(201,168,104,.42); transform: rotate(-8deg); }
-.lamp::after { content: ""; position: absolute; right: -34px; bottom: -18px; width: 96px; height: 34px; border-radius: 50%; background: radial-gradient(circle, rgba(242,234,219,.7), rgba(201,168,104,.14) 48%, transparent 72%); }
-.cityLights { position: absolute; right: 0; top: 0; width: 26%; height: 70%; background: linear-gradient(90deg, transparent, rgba(5,9,13,.9)), repeating-linear-gradient(90deg, transparent 0 22px, rgba(242,234,219,.12) 23px 25px, transparent 26px 48px); opacity: .62; }
-.sceneLogo { position: absolute; right: 18%; top: 22%; z-index: 3; display: grid; text-align: center; color: var(--gold); text-shadow: 0 8px 28px rgba(0,0,0,.8); }
-.sceneLogo span { font-family: "Cormorant Garamond", Georgia, serif; font-size: 4.6rem; letter-spacing: -.16em; line-height: .85; }
-.sceneLogo small { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.7rem; color: var(--soft); }
+.heroShell::after {
+  content: "NB\A NorthBridge";
+  white-space: pre;
+  position: absolute;
+  right: clamp(2rem, 10vw, 10rem);
+  top: 30%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: rgba(201,168,104,.82);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.45rem, 4.2vw, 4.7rem);
+  line-height: .95;
+  letter-spacing: -.09em;
+  text-shadow: 0 20px 60px rgba(0,0,0,.9);
+  opacity: .88;
+}
+.heroCopy { padding: clamp(4.5rem, 8vw, 7.4rem) clamp(1rem, 5vw, 4.8rem); position: relative; z-index: 2; max-width: 980px; }
+.heroCopy::after { content: ""; display: block; width: 78px; height: 1px; background: var(--gold); margin-top: 2rem; opacity: .75; }
+.heroVisual { display: none; }
+.officeScene, .shelfGrid, .chair, .desk, .book, .glass, .lamp, .cityLights, .sceneLogo { display: none; }
 
 .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: .24em; font-size: .72rem; font-weight: 800; margin-bottom: 1.2rem; }
 .withLine { display: inline-flex; align-items: center; gap: 1rem; }
@@ -204,8 +221,6 @@ ul { color: var(--muted); line-height: 1.9; padding-left: 1.15rem; }
 
 @media (max-width: 1180px) {
   .navLinks { gap: .78rem; font-size: .68rem; }
-  .heroShell { grid-template-columns: 1fr; }
-  .heroVisual { min-height: 520px; border-left: 0; border-top: 1px solid var(--line-soft); }
   .serviceGrid, .metricBar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric:nth-child(2) { border-right: 0; }
   .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--line-soft); }
@@ -217,8 +232,10 @@ ul { color: var(--muted); line-height: 1.9; padding-left: 1.15rem; }
   .brandText small { display: none; }
   .navLinks { flex-wrap: wrap; justify-content: flex-end; gap: .5rem; }
   .navCta { display: none; }
-  .heroCopy { padding-top: 4rem; }
-  .heroVisual { min-height: 420px; }
+  .heroShell { min-height: auto; }
+  .heroShell::before { width: 100%; opacity: .45; }
+  .heroShell::after { display: none; }
+  .heroCopy { padding-top: 4.5rem; padding-bottom: 5rem; }
   .serviceIntro, .two, .three, .four, .split, .contact, .footer, .caseGrid { grid-template-columns: 1fr; }
   .serviceGrid, .metricBar { grid-template-columns: 1fr; }
   .metric { border-right: 0; border-bottom: 1px solid var(--line-soft); }
