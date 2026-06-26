@@ -94,22 +94,11 @@ export default function Home() {
             <a className="button ghost" href="mailto:ivan.rozinko@gmail.com">Work with me</a>
           </div>
         </div>
-
-        <div className="heroVisual" aria-hidden="true">
-          <div className="officeScene">
-            <div className="shelfGrid">
-              <span /><span /><span /><span /><span /><span />
-            </div>
-            <div className="chair" />
-            <div className="desk">
-              <div className="book" />
-              <div className="glass" />
-              <div className="lamp" />
-            </div>
-            <div className="cityLights" />
-            <div className="sceneLogo"><span>NB</span><small>NorthBridge</small></div>
-          </div>
-        </div>
+        <aside className="heroPanel" aria-label="NorthBridge positioning">
+          <div className="heroPanelMark">NB</div>
+          <p>NorthBridge</p>
+          <span>Technical Leadership & Advisory</span>
+        </aside>
       </section>
 
       <section className="metricBar" aria-label="Experience and positioning">
