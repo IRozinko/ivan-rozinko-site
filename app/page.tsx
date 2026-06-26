@@ -77,7 +77,7 @@ export default function Home() {
     <main>
       <SiteNav active="home" locale="en" enHref="/" uaHref="/ua" />
 
-      <section id="top" className="heroShell">
+      <section id="top" className="heroShell heroTypographic">
         <div className="heroCopy">
           <div className="eyebrow withLine">Technical Leadership & Advisory</div>
           <h1>
@@ -94,11 +94,6 @@ export default function Home() {
             <a className="button ghost" href="mailto:ivan.rozinko@gmail.com">Work with me</a>
           </div>
         </div>
-        <aside className="heroPanel" aria-label="NorthBridge positioning">
-          <div className="heroPanelMark">NB</div>
-          <p>NorthBridge</p>
-          <span>Technical Leadership & Advisory</span>
-        </aside>
       </section>
 
       <section className="metricBar" aria-label="Experience and positioning">
