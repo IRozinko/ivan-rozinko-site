@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './site-final.css';
 
 export const metadata: Metadata = {
   title: 'Ivan Rozinko — Critical Systems Engineering Leader',
