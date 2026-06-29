@@ -89,7 +89,7 @@ export default function Home() {
             Senior cross-layer engineering leader and advisor. I help organizations build reliable systems, strengthen delivery, and reduce risk across software, cloud, QA strategy, fintech/Web3, AI readiness and regulated industries.
           </p>
           <div className="ctaRow">
-            <a className="button primary" href="/services">Explore services <span aria-hidden="true">→</span></a>
+            <a className="button primary" href="/services/critical-systems-risk-audit">Risk Audit <span aria-hidden="true">→</span></a>
             <a className="button secondary" href="/case-studies">View case studies</a>
             <a className="button ghost" href="mailto:ivan.rozinko@gmail.com">Work with me</a>
           </div>
@@ -154,8 +154,8 @@ export default function Home() {
             A compact advisory engagement that maps the top technical and operational risks across architecture, platform, CI/CD, QA, monitoring, release process, incident readiness and business-critical flows.
           </p>
           <div className="ctaRow">
-            <a className="button primary" href="/northbridge">NorthBridge Advisory</a>
-            <a className="button secondary" href="/cv">Request CV</a>
+            <a className="button primary" href="/services/critical-systems-risk-audit">View audit offer</a>
+            <a className="button secondary" href="/northbridge">NorthBridge Advisory</a>
           </div>
         </div>
         <div className="card accent">
