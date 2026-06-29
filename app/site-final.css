@@ -1,0 +1,44 @@
+.heroTight { min-height: 58vh; }
+.heroTight .lead { max-width: 840px; }
+
+.servicePackage { display: flex; flex-direction: column; min-height: 360px; }
+.servicePackage .textLink { margin-top: auto; padding-top: 1rem; }
+
+.kickerLine { color: var(--soft); font-size: .95rem; text-transform: uppercase; letter-spacing: .2em; font-weight: 800; margin-top: .75rem; }
+
+.deliverableGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.deliverableCard { min-height: 220px; }
+.deliverableCard strong { color: var(--gold); display: block; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; margin-bottom: .85rem; }
+
+.numberedList { counter-reset: step; display: grid; gap: 1rem; }
+.numberedList article { counter-increment: step; position: relative; padding-left: 4.2rem; }
+.numberedList article::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 1.5rem;
+  top: 1.45rem;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.miniMeta { display: grid; gap: .65rem; margin-top: 1.35rem; }
+.miniMeta span { color: var(--soft); border-bottom: 1px solid var(--line-soft); padding-bottom: .65rem; }
+.miniMeta strong { color: var(--gold); font-size: .72rem; text-transform: uppercase; letter-spacing: .18em; display: block; margin-bottom: .2rem; }
+
+.outcomeStrip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.outcomeStrip .card { min-height: 210px; }
+
+.auditBand { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+
+@media (max-width: 1180px) {
+  .deliverableGrid, .outcomeStrip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 850px) {
+  .deliverableGrid, .outcomeStrip { grid-template-columns: 1fr; }
+  .servicePackage { min-height: auto; }
+  .numberedList article { padding-left: 1.35rem; }
+  .numberedList article::before { position: static; display: block; margin-bottom: .8rem; }
+}
