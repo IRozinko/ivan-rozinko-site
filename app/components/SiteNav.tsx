@@ -11,18 +11,18 @@ const labels = {
   en: [
     ['About', '/about', 'about'],
     ['Services', '/services', 'services'],
+    ['Risk Audit', '/services/critical-systems-risk-audit', 'audit'],
     ['Case studies', '/case-studies', 'case-studies'],
-    ['Advisory focus', '/northbridge', 'northbridge'],
-    ['Insights', '/writing', 'writing'],
-    ['CV', '/cv', 'cv'],
+    ['Advisory', '/northbridge', 'northbridge'],
+    ['Profile', '/cv', 'cv'],
   ],
   ua: [
     ['Про мене', '/ua/about', 'about'],
     ['Послуги', '/ua/services', 'services'],
+    ['Risk Audit', '/ua/services/critical-systems-risk-audit', 'audit'],
     ['Кейси', '/ua/case-studies', 'case-studies'],
     ['Консалтинг', '/ua/northbridge', 'northbridge'],
-    ['Нотатки', '/ua/writing', 'writing'],
-    ['CV', '/ua/cv', 'cv'],
+    ['Профіль', '/ua/cv', 'cv'],
   ],
 };
 
