@@ -2,43 +2,91 @@ import { SiteFooter } from '../components/SiteFooter';
 import { SiteNav } from '../components/SiteNav';
 
 const tracks = [
-  ['Principal Systems / Platform Engineer', 'For Staff, Principal, Platform Architect and Principal SRE roles.'],
-  ['Head of Engineering / CTO', 'For Head, Director, VP Engineering, CTO and Fractional CTO roles.'],
-  ['Platform / SRE / DevOps Lead', 'For platform, cloud, infrastructure, DevOps and SRE leadership roles.'],
-  ['FinTech / Web3 Quality & Risk Lead', 'For fintech, Web3, QA leadership, release-risk and payment-risk roles.'],
+  ['Platform / SRE / DevOps', 'For Senior Platform Engineer, SRE, DevOps Lead, AWS/EKS/ECS, Kubernetes, Terraform and production-reliability roles.'],
+  ['Software Architect / AI Product Engineer', 'For R&D, distributed systems, Python/Go, agentic SDLC, data-platform and AI-assisted delivery roles.'],
+  ['QA Strategy / Payments Risk', 'For Senior QA, AQA, backend quality, payments, partner platform, transaction-risk and release-confidence roles.'],
+  ['Head of Engineering / Technical Director', 'For leadership roles focused on engineering operating model, delivery control, architecture, risk and stakeholder ownership.'],
+];
+
+const proof = [
+  ['Website', 'NorthBridge advisory, services and case studies.', '/'],
+  ['Risk Audit', 'Critical Systems Risk Audit offer and delivery model.', '/services/critical-systems-risk-audit'],
+  ['GitHub', 'Public proof assets, frameworks and repositories.', 'https://github.com/IRozinko'],
 ];
 
 export default function CVPage() {
   return (
     <main>
       <SiteNav active="cv" locale="en" enHref="/cv" uaHref="/ua/cv" />
-      <section className="section hero">
-        <div className="eyebrow">CV</div>
+      <section className="section hero heroTight">
+        <div className="eyebrow withLine">Profile</div>
         <h1>Targeted CV available on request.</h1>
-        <p className="lead">I keep separate CV versions for different markets instead of sending one generic resume everywhere. That keeps the signal precise for recruiters, CTOs, founders and advisory clients.</p>
+        <p className="lead">
+          I keep separate CV versions for different hiring contexts instead of publishing one generic resume. That keeps the signal precise for recruiters, CTOs, founders and advisory clients.
+        </p>
         <div className="ctaRow">
-          <a className="button primary" href="mailto:ivan.rozinko@gmail.com">Request CV</a>
-          <a className="button secondary" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">View GitHub</a>
+          <a className="button primary" href="mailto:ivan.rozinko@gmail.com">Request targeted CV</a>
+          <a className="button secondary" href="/case-studies">View case studies</a>
+          <a className="button ghost" href="https://github.com/IRozinko" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </section>
+
+      <section className="section split auditBand">
+        <div>
+          <div className="eyebrow withLine">Positioning</div>
+          <h2>Critical Systems Engineering Leader.</h2>
+          <p>
+            Cross-layer engineering leader across software, platform reliability, QA strategy, fintech/Web3 risk, AI readiness and regulated delivery. Best fit: roles or advisory work where reliability, delivery, money-flow correctness, operational evidence or technical-risk visibility matter.
+          </p>
+        </div>
+        <div className="card accent">
+          <h3>Why not one public resume?</h3>
+          <p>A Platform role needs infrastructure and reliability evidence. A QA Payments role needs risk and correctness evidence. A Head/Director role needs leadership and operating-model evidence. The right CV version depends on the buying context.</p>
+        </div>
+      </section>
+
       <section className="section">
-        <div className="eyebrow">Available tracks</div>
-        <h2>One profile, different buying contexts</h2>
+        <div className="sectionHeader">
+          <div>
+            <div className="eyebrow withLine">CV tracks</div>
+            <h2>One profile, different role contexts.</h2>
+          </div>
+        </div>
         <div className="grid two">
           {tracks.map(([title, text]) => <article className="card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
         </div>
       </section>
-      <section className="section split">
-        <div>
-          <div className="eyebrow">Why not one public resume?</div>
-          <h2>Different roles buy different evidence.</h2>
-          <p>A Principal Platform role needs infrastructure, systems and reliability signals. A Head of Engineering role needs leadership, delivery and stakeholder ownership. A FinTech/Web3 role needs payment-risk and QA strategy. Publishing every version publicly creates noise; sending the right version creates clarity.</p>
+
+      <section className="section">
+        <div className="sectionHeader">
+          <div>
+            <div className="eyebrow withLine">Public proof</div>
+            <h2>What to review before asking for CV.</h2>
+          </div>
         </div>
-        <div className="card accent">
-          <h3>Best request format</h3>
-          <p>Send the role, company, seniority level and hiring context. I will provide the most relevant version.</p>
+        <div className="grid three">
+          {proof.map(([title, text, href]) => (
+            <a className="card repo servicePackage" href={href} key={title} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+              <span className="textLink">Open →</span>
+            </a>
+          ))}
         </div>
       </section>
+
+      <section className="section contact">
+        <div>
+          <div className="eyebrow withLine">Best request format</div>
+          <h2>Send the role, company, seniority level and hiring context.</h2>
+          <p>I will provide the most relevant CV version for that context.</p>
+        </div>
+        <div className="ctaRow">
+          <a className="button primary" href="mailto:ivan.rozinko@gmail.com">Email Ivan</a>
+          <a className="button secondary" href="/services/critical-systems-risk-audit">Risk Audit</a>
+        </div>
+      </section>
+
       <SiteFooter locale="en" />
     </main>
   );
