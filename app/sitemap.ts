@@ -15,7 +15,6 @@ const routes = [
   '/case-studies/regulated-it-audit-ready-delivery',
   '/cv',
   '/northbridge',
-  '/writing',
   '/ua',
   '/ua/about',
   '/ua/services',
@@ -23,7 +22,6 @@ const routes = [
   '/ua/case-studies',
   '/ua/cv',
   '/ua/northbridge',
-  '/ua/writing',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
