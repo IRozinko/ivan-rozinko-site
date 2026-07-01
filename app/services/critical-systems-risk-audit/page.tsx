@@ -37,7 +37,7 @@ const bestFit = [
 export default function CriticalSystemsRiskAuditPage() {
   return (
     <main>
-      <SiteNav active="services" locale="en" enHref="/services/critical-systems-risk-audit" uaHref="/ua/services/critical-systems-risk-audit" />
+      <SiteNav active="audit" locale="en" enHref="/services/critical-systems-risk-audit" uaHref="/ua/services/critical-systems-risk-audit" />
 
       <section className="section hero heroTight">
         <div className="eyebrow withLine">Core advisory offer</div>
